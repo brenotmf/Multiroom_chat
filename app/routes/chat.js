@@ -1,11 +1,11 @@
 module.exports = function(application){
-    application.post('/', function(req, res){
-        res.render("chat");
+    application.post('/chat', function(req, res){
+        application.app.controllers.chat.iniciaChat(application, req, res);
     });
 }
 
 module.exports = function(application){
-    application.get('/', function(req, res){
-        res.render("chat");
+    application.get('/chat', function(req, res){
+        application.app.controllers.chat.iniciaChat(application, req, res);
     });
 }
